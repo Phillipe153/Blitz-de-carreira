@@ -7,7 +7,7 @@ app.use(express.json());
 
 app.use('/', router);
 
-const port = process.env.API_PORT || 3000;
+const port = process.env.PORT || 3000;
 
 app.use((err, _req, res, _next) => {
   if (err.status) return res.status(err.status).json({ message: err.message });
