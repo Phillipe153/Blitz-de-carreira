@@ -5,7 +5,7 @@ const app = require('./api');
 
 app.use(express.json());
 
-app.use(router);
+app.use('/', router);
 
 const port = process.env.API_PORT || 3000;
 
