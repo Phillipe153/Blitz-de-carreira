@@ -14,6 +14,7 @@ const postTask = async (req, res) => {
 
 const putTask = async (req, res) => {
     const { id, status } = req.body;
+    console.log("id:", id);
     const newStatus = "Em progresso"
     await service.putTask(id, status);
 

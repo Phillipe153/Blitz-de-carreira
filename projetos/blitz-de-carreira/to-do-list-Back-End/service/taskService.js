@@ -11,6 +11,8 @@ const postTask = async (newTask) => {
 }
 
 const putTask = async (id, newStatus) => {
+    console.log(id);
+    console.log(newStatus);
     const taskById= await task.findOne({ where: {id}})
     taskById.update({status: newStatus})
 
